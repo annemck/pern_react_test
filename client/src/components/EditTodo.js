@@ -4,6 +4,23 @@ const EditTodo = ({todo}) => {
   
   const [description, setDescription] = useState(todo.description);
   
+  const updateDescription = async(e) => {
+    e.preventDefault();
+    try {
+      
+      const body = {description};
+      const response = await fetch(`http://localhost:5000/todos/${todo.todo_id}`,
+      {
+        method: "PUT",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(body)
+      });
+      
+    } catch (err){
+      console.error(err.message);
+    }
+  }
+  
   return (
     <Fragment>
       {/* Button to Open the Modal*/}
@@ -24,12 +41,12 @@ const EditTodo = ({todo}) => {
 
             {/* Modal body*/}
             <div className="modal-body">
-              <input type="text" className="form-control" value={description}/>
+              <input type="text" className="form-control" value={description} onChange={e => setDescription(e.target.value)}/>
             </div>
 
             {/* Modal footer*/}
             <div className="modal-footer">
-            <button type="button" className="btn btn-primary" data-dismiss="modal">Edit</button>
+            <button type="button" className="btn btn-primary" data-dismiss="modal" onClick={e => updateDescription(e)}>Edit</button>
               <button type="button" className="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
 
