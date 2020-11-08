@@ -17,7 +17,7 @@ const InputToDo = () => {
         }
       );
       
-      console.log(response);
+      window.location = "/";
       
     } catch (err) {
       console.log(err.message);
