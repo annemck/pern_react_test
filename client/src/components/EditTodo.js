@@ -6,7 +6,7 @@ const EditTodo = () => {
     <Fragment>
       {/* Button to Open the Modal*/}
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-        Open modal
+        Edit
       </button>
 
       {/* The Modal*/}
@@ -16,17 +16,18 @@ const EditTodo = () => {
 
             {/* Modal Header*/}
             <div class="modal-header">
-              <h4 class="modal-title">Modal Heading</h4>
+              <h4 class="modal-title">Edit Todo</h4>
               <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
             {/* Modal body*/}
             <div class="modal-body">
-              Modal body..
+              <input type="text" className="form-control"/>
             </div>
 
             {/* Modal footer*/}
             <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Edit</button>
               <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
 
