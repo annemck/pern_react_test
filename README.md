@@ -1,9 +1,9 @@
-#Pern Todo List
+# Pern Todo List
 
-##General info
+## General info
 This project is a simple todo list using the PERN stack (PostgreSQL, Express, React, Nodejs). It was a personal project to practice using the pg library and to refresh React skills.
 
-##Setup
+## Setup
 To run this project, first install it locally using npm:
 
 ```
