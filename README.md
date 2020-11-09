@@ -1,3 +1,5 @@
+#Pern Todo List
+
 ##General info
 This project is a simple todo list using the PERN stack (PostgreSQL, Express, React, Nodejs). It was a personal project to practice using the pg library and to refresh React skills.
 
